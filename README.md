@@ -1,32 +1,37 @@
-# Project: DataCorp Staging Environment Setup
+# Project: Linux for Data Engineering (Lab 1)
 
-## Scenario
+## Objective
+This project simulates a real-world scenario where you, as a Data Engineer, must set up a staging environment. You will demonstrate proficiency in **Linux File Systems, Permissions, Process Management, and Bash Scripting.**
+
+##  Project Setup (Do this first!)
+1.  **GitHub:** Log in to your GitHub account.
+2.  **Create Repo:** Create a new public repository named `linux-data-engineering-lab`.
+3.  **Clone:** Clone this repository to your local machine (using WSL, Ubuntu, or Git Bash).
+4.  **Documentation:** Add this `README.md` file to your repository so visitors know what the project is about.
+5.  **Evidence:** As you complete the tasks below, you will need to take screenshots of your terminal commands and output. You will upload these screenshots to this repository.
+
+---
+
+##  The Scenario: DataCorp Staging Setup
 You have just joined **DataCorp** as a Junior Data Engineer. Your team is preparing to deploy a new data ingestion pipeline. Before the deployment can happen, the team lead has tasked you with preparing the Linux staging server.
 
 You must demonstrate your ability to navigate the file system, secure data directories, manage processes, and write basic automation scripts to ensure the server is ready for the ETL jobs.
 
-##  Prerequisites
-* **Environment:** You must complete this project in a Linux-based environment.
-    * **Mac/Linux Users:** Use your standard terminal.
-    * **Windows Users:** It is highly recommended to use **WSL (Ubuntu)** or a **Docker container** running Ubuntu.
-    * *Note for Git Bash users:* Most commands will work, but Package Management tasks may not apply.
-* **Tools:** A command-line text editor (like `nano` or `vim`).
-
 ---
 
-##  Project Instructions
+## Task Instructions
 
 ### Part 1: File System Navigation & Structure
 **Goal:** Create the directory structure required for the data pipeline.
 
-1.  Navigate to your home directory.
-2.  Create a parent directory named `datacorp_pipeline`.
+1.  Navigate to your repository directory in your terminal.
+2.  Create a directory named `datacorp_pipeline`.
 3.  Inside `datacorp_pipeline`, create three sub-directories:
     * `source_data`
     * `processed_data`
     * `logs`
 4.  Create an empty file named `pipeline.conf` inside the `datacorp_pipeline` directory.
-5.  List the contents of the `datacorp_pipeline` directory to verify the structure (ensure you can see hidden files if any).
+5.  List the contents of the `datacorp_pipeline` directory to verify the structure.
 
 ### Part 2: File Permissions & Ownership
 **Goal:** Secure the sensitive source data.
@@ -40,7 +45,6 @@ You must demonstrate your ability to navigate the file system, secure data direc
 
 1.  Create a temporary environment variable named `ETL_STAGE` and set its value to `staging`.
 2.  Print the value of `ETL_STAGE` to the terminal to verify it is set.
-3.  *Bonus:* How would you make this variable persist if you closed the terminal? (You do not need to implement this, just add a comment in your submission about which file you would edit).
 
 ### Part 4: Process Management
 **Goal:** Manage a "stuck" background process.
@@ -51,7 +55,7 @@ You must demonstrate your ability to navigate the file system, secure data direc
 4.  Verify the process is gone.
 
 ### Part 5: Package Management
-*(Skip this step if using Git Bash)*
+*(Skip this step if using Git Bash on Windows)*
 **Goal:** Ensure the server has necessary monitoring tools.
 
 1.  Update your system's package repository lists.
@@ -80,12 +84,10 @@ You must demonstrate your ability to navigate the file system, secure data direc
 
 ## Submission Requirements
 
-You must submit a **Single PDF** containing screenshots of your terminal.
+To complete this project, your GitHub repository must contain:
 
-1.  **Screenshot 1 (Setup):** Showing the creation of folders and the directory listing (Part 1).
-2.  **Screenshot 2 (Permissions):** Showing the `ls -l` output of the locked-down folder (Part 2).
-3.  **Screenshot 3 (Env Vars):** Showing the echo output of your variable (Part 3).
-4.  **Screenshot 4 (Processes):** Showing the command to kill the sleep process (Part 4).
-5.  **Screenshot 5 (Scripting):** Showing the content of your script (using `cat`) and the output of running the script (Part 7).
+1.  **The Directory Structure:** The folders and files you created in Part 1.
+2.  **The Script:** The `daily_maintenance.sh` file you wrote in Part 7.
+3.  **The Proof:** A folder named `screenshots` containing images of your terminal for each Part (1-7), OR a single PDF document named `Lab_Report.pdf` with all screenshots compiled.
 
-**Note:** Please name your repository `linux-data-engineering-lab` and upload this README there along with your PDF submission.
+**Final Step:** Submit the URL to your GitHub repository.
